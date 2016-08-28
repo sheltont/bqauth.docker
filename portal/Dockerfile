@@ -22,7 +22,7 @@ RUN apt-get install -y python python-dev python-distribute python-pip
 RUN git clone https://github.com/sheltont/bqauth.git /var/bqauth
 
 # Copy the uwsgi ini file
-ADD bqauth_uwsgi.ini /var/bqauth/
+COPY bqauth_uwsgi.ini /var/bqauth/
 
 # Get pip to download and install requirements:
 RUN pip install uwsgi
