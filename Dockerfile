@@ -20,7 +20,7 @@ RUN apt-get install -y tar git curl nano wget dialog net-tools build-essential
 RUN apt-get install -y python python-dev python-distribute python-pip
 
 # Fetch the application from github
-RUN git clone --branch v0.1 https://github.com/sheltont/bqauth.git /var/bqauth
+RUN git clone https://github.com/sheltont/bqauth.git /var/bqauth
 
 # Get pip to download and install requirements:
 RUN pip install uwsgi
