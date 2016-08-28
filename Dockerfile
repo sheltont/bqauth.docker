@@ -23,10 +23,11 @@ RUN cd /var
 
 # Fetch the application from github
 RUN git clone --branch v0.1 https://github.com/sheltont/bqauth.git
-
+RUN cd /var/bqauth
 # Get pip to download and install requirements:
 RUN pip install uwsgi
 RUN pip install -r requirements.txt
+
 
 
 # Expose ports
