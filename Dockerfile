@@ -21,6 +21,7 @@ RUN apt-get install -y python python-dev python-distribute python-pip
 
 # Fetch the application from github
 RUN git clone https://github.com/sheltont/bqauth.git /var/bqauth
+RUN mkdir -p /var/bqauth/logging
 
 # Get pip to download and install requirements:
 RUN pip install uwsgi
